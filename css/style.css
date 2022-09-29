@@ -4,10 +4,11 @@
     --ms_sony-logo-height: 27px;
 
     /* COLORS */
-    --ms_primary-light-blue: #00439c;
-    --ms_primary-dark-blue: #161c3b;
-    --ms_secondary-light-blue: #1d82d3;
-    --ms_secondary-dark-blue: #2d64e6;
+    --ms_primary-light-color: #00439c;
+    --ms_primary-dark-color: #161c3b;
+    --ms_secondary-light-color: #1d82d3;
+    --ms_secondary-dark-color: #2d64e6;
+    --ms_tertiary-color: #bebcbb;
 }
 
 /* COMMON */
@@ -37,6 +38,10 @@ ul {
     font-size: .8rem;
 }
 
+.ms_w-60 {
+    width: 60%;
+}
+
 .ms_btn {
     display: inline-block;
     text-align: center;
@@ -44,12 +49,20 @@ ul {
     border-radius: 20px;
 }
 
+.ms_text-secondary-light-color {
+    color: var(--ms_secondary-light-color);
+}
+
 .ms_bg-orange {
     background-color: #cd3d0f;
 }
 
-.ms_bg-secondary-dark-blue {
-    background-color: var(--ms_secondary-dark-blue);
+.ms_bg-secondary-dark-color {
+    background-color: var(--ms_secondary-dark-color);
+}
+
+.ms_bg-tertiary-color {
+    background-color: var(--ms_tertiary-color);
 }
 
 /* HEADER */
@@ -57,7 +70,6 @@ header {
     z-index: 999;
     height: 50px;
     width: 100%;
-    border: 1px solid blue;
 }
 
 header .navbar.ms_navbar {
@@ -110,7 +122,26 @@ header .nav-link.active.ms_btn {
     padding-bottom: 3rem;
 }
 
-#banner img {
-    width: 20rem;
+/* PLUS */
+#plus .ms_container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
+@media screen and (min-width: 768px) {
+    
+    #plus .ms_container {
+        background-image: url("../img/ps-plus-april-monthly-games-featured-image-block.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    
+    #plus .ms_container {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
