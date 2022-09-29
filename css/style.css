@@ -52,12 +52,9 @@ ul {
     background-color: var(--ms_secondary-dark-blue);
 }
 
-.ms_border-bottom {
-    border-bottom: 2px solid var(--ms_secondary-light-blue);
-}
-
 /* HEADER */
 header {
+    z-index: 999;
     height: 50px;
     width: 100%;
     border: 1px solid blue;
@@ -102,3 +99,18 @@ header .nav-link.active.ms_btn {
 #jumbotron img {
     width: 20rem;
 }
+
+/* BANNER */
+#banner {
+    background-image: url("../img/it-takes-two-hero-banner-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+#banner img {
+    width: 20rem;
+}
+
