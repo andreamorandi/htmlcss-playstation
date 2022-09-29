@@ -1,0 +1,56 @@
+/* COMMON */
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* UTILITIES */
+.ms_fs-7 {
+    font-size: .8rem;
+}
+
+.ms_font-white {
+    color: white;
+}
+
+.ms_bg-black {
+    background-color: black;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    border: 1px solid blue;
+}
+
+header li {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.ms_sony-logo {
+    width: 75px;
+    padding: .5rem 0;
+}
+
+.nav-link.active.ms_font-white {
+    color: white;
+}
+
+.nav-link.active.ms_btn-s {
+    padding: .3rem .75rem;
+    border-radius: 20px;
+}
