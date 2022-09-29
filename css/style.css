@@ -1,4 +1,20 @@
+/* VARIABLES */
+:root {
+    /* HEIGHTS */
+    --ms_sony-logo-height: 27px;
+
+    /* COLORS */
+    --ms_primary-light-blue: #00439c;
+    --ms_primary-dark-blue: #161c3b;
+    --ms_secondary-light-blue: #1d82d3;
+    --ms_secondary-dark-blue: #2d64e6;
+}
+
 /* COMMON */
+body {
+    margin-top: calc(60px + var(--ms_sony-logo-height));
+}
+
 img {
     max-width: 100%;
 }
@@ -21,18 +37,34 @@ ul {
     font-size: .8rem;
 }
 
-.ms_font-white {
-    color: white;
+.ms_btn {
+    display: inline-block;
+    text-align: center;
+    padding: .4rem 1rem;
+    border-radius: 20px;
 }
 
-.ms_bg-black {
-    background-color: black;
+.ms_bg-orange {
+    background-color: #cd3d0f;
+}
+
+.ms_bg-secondary-dark-blue {
+    background-color: var(--ms_secondary-dark-blue);
+}
+
+.ms_border-bottom {
+    border-bottom: 2px solid var(--ms_secondary-light-blue);
 }
 
 /* HEADER */
 header {
+    height: 50px;
     width: 100%;
     border: 1px solid blue;
+}
+
+header .navbar.ms_navbar {
+    padding: 0;
 }
 
 header li {
@@ -41,16 +73,32 @@ header li {
     height: 50px;
 }
 
-.ms_sony-logo {
-    width: 75px;
+header .ms_sony-logo {
+    display: block;
+    height: var(--ms_sony-logo-height);
     padding: .5rem 0;
 }
 
-.nav-link.active.ms_font-white {
+header .nav-link.active.ms_font-white {
     color: white;
 }
 
-.nav-link.active.ms_btn-s {
+header .nav-link.active.ms_btn {
+    text-align: center;
     padding: .3rem .75rem;
     border-radius: 20px;
+}
+
+/* JUMBOTRON */
+#jumbotron {
+    background-image: url("../img/jumbo-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    padding-top: 20rem;
+    padding-bottom: 3rem;
+}
+
+#jumbotron img {
+    width: 20rem;
 }
