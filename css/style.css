@@ -8,7 +8,9 @@
     --ms_primary-dark-color: #161c3b;
     --ms_secondary-light-color: #1d82d3;
     --ms_secondary-dark-color: #2d64e6;
-    --ms_tertiary-color: #bebcbb;
+    --ms_tertiary-light-color: #bebcbb;
+    --ms_tertiary-dark-color: #1f1f1f;
+    --ms_orange: #cd3d0f;
 }
 
 /* COMMON */
@@ -42,21 +44,6 @@ ul {
     width: 60%;
 }
 
-.ms_btn {
-    display: inline-block;
-    text-align: center;
-    padding: .4rem 1rem;
-    border-radius: 20px;
-}
-
-.ms_text-secondary-light-color {
-    color: var(--ms_secondary-light-color);
-}
-
-.ms_bg-orange {
-    background-color: #cd3d0f;
-}
-
 .ms_bg-primary-light-color {
     background-color: var(--ms_primary-light-color);
 
@@ -65,12 +52,59 @@ ul {
     background-color: var(--ms_primary-dark-color);
 }
 
-.ms_bg-secondary-dark-color {
-    background-color: var(--ms_secondary-dark-color);
+.ms_bg-tertiary-light-color {
+    background-color: var(--ms_tertiary-light-color);
 }
 
-.ms_bg-tertiary-color {
-    background-color: var(--ms_tertiary-color);
+[class*="ms_btn"] {
+    display: inline-block;
+    text-align: center;
+    padding: .4rem 1rem;
+    border-radius: 20px;
+    transition: 0.1s;
+}
+
+[class*="ms_btn"]:hover {
+    transform: scale(.95, .9);
+    outline-width: 1px;
+    outline-style: solid;
+    outline-offset: +2px;
+    box-shadow: inset 0px 0px 25px 0px rgba(0, 0, 0, .25);
+    color: white;
+}
+
+.ms_btn-orange {
+    color: white;
+    background-color: var(--ms_orange);
+    outline-color: var(--ms_orange);
+}
+
+.ms_btn-blue {
+    color: white;
+    background-color: var(--ms_secondary-dark-color);
+    outline-color: var(--ms_secondary-dark-color);
+}
+
+.ms_btn-light {
+    color: var(--ms_secondary-light-color);
+    background-color: rgba(255, 255, 255, .45);
+    outline-color: rgba(255, 255, 255, .45);
+}
+
+.ms_btn-light:hover {
+    color: var(--ms_secondary-light-color);
+    box-shadow: inset 0px 0px 25px 0px rgba(255, 255, 255, .75);
+}
+
+.ms_btn-white {
+    color: black;
+    background-color: white;
+    outline-color: white
+}
+
+.ms_btn-white:hover {
+    color: black;
+    box-shadow: inset 0px 0px 25px 0px rgba(0, 0, 0, .25);
 }
 
 /* HEADER */
@@ -96,14 +130,11 @@ header .ms_sony-logo {
     padding: .5rem 0;
 }
 
-header .nav-link.active.ms_font-white {
-    color: white;
-}
-
-header .nav-link.active.ms_btn {
-    text-align: center;
+header .nav-link.active.ms_btn-dark {
     padding: .3rem .75rem;
-    border-radius: 20px;
+    color: white;
+    background-color: var(--ms_tertiary-dark-color);
+    outline-color: var(--ms_tertiary-dark-color);
 }
 
 /* JUMBOTRON */
