@@ -35,7 +35,7 @@ ul {
 
 /* UTILITIES */
 .ms_fs-7 {
-    font-size: .8rem;
+    font-size: .7rem;
 }
 
 .ms_w-60 {
@@ -55,6 +55,14 @@ ul {
 
 .ms_bg-orange {
     background-color: #cd3d0f;
+}
+
+.ms_bg-primary-light-color {
+    background-color: var(--ms_primary-light-color);
+
+}
+.ms_bg-primary-dark-color {
+    background-color: var(--ms_primary-dark-color);
 }
 
 .ms_bg-secondary-dark-color {
@@ -122,26 +130,20 @@ header .nav-link.active.ms_btn {
     padding-bottom: 3rem;
 }
 
-/* PLUS */
-#plus .ms_container {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+/* FOOTER */
+footer img {
+    display: block;
+    width: 7rem;
 }
 
-@media screen and (min-width: 768px) {
-    
-    #plus .ms_container {
-        background-image: url("../img/ps-plus-april-monthly-games-featured-image-block.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: right;
-    }
+footer .ms_globe {
+    display: inline-block;
+    width: 1.25rem;
+    line-height: 1.25rem;
+    vertical-align: middle;
 }
 
-@media screen and (min-width: 992px) {
-    
-    #plus .ms_container {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-    }
+footer .ms_country {
+    line-height: 1.25rem;
+    vertical-align: middle;
 }
