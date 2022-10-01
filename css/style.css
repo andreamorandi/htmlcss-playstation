@@ -2,6 +2,8 @@
 :root {
     /* HEIGHTS */
     --ms_sony-logo-height: 27px;
+    --ms_navbar-height: 60px;
+    --ms_header-height: calc(var(--ms_sony-logo-height) + var(--ms_navbar-height));
 
     /* COLORS */
     --ms_primary-light-color: #00439c;
@@ -15,7 +17,7 @@
 
 /* COMMON */
 body {
-    margin-top: calc(60px + var(--ms_sony-logo-height));
+    margin-top: var(--ms_header-height);
 }
 
 img {
@@ -44,6 +46,14 @@ ul {
     width: 60%;
 }
 
+.ms_text-secondary-light-color {
+    color: var(--ms_secondary-light-color);
+}
+
+.ms_text-secondary-light-color-hover:hover {
+    color: var(--ms_secondary-light-color);
+}
+
 .ms_bg-primary-light-color {
     background-color: var(--ms_primary-light-color);
 
@@ -56,12 +66,17 @@ ul {
     background-color: var(--ms_tertiary-light-color);
 }
 
+.ms_outline-secondary-light-color {
+    outline: 3px solid var(--ms_secondary-light-color);
+    outline-offset: 3px;
+}
+
 [class*="ms_btn"] {
     display: inline-block;
     text-align: center;
     padding: .4rem 1rem;
     border-radius: 20px;
-    transition: 0.1s;
+    transition: 100ms;
 }
 
 [class*="ms_btn"]:hover {
@@ -127,6 +142,7 @@ header li {
 header .ms_sony-logo {
     display: block;
     height: var(--ms_sony-logo-height);
+    margin-right: .5rem;
     padding: .5rem 0;
 }
 
@@ -135,6 +151,68 @@ header .nav-link.active.ms_btn-dark {
     color: white;
     background-color: var(--ms_tertiary-dark-color);
     outline-color: var(--ms_tertiary-dark-color);
+}
+
+header nav .dropdown-toggle.ms_dropdown-toggle::after {
+    content: "\f078";
+    font-family: FontAwesome;
+    font-size: .8rem;
+    margin-left: .1rem;
+    border: 0;
+    vertical-align: middle;
+}
+
+header nav .nav-link.ms_nav-link {
+    margin: 0 .25rem;
+}
+
+header nav .nav-link.ms_nav-link:hover {
+    color: black;
+}
+
+header nav i{
+    transform: scale(1.25);
+}
+
+/* HEADER DROPDOWN */
+header nav .nav-item {
+    height: var(--ms_navbar-height);
+    position: static;
+}
+
+header nav .dropdown-menu.ms_dropdown-menu {
+    top: var(--ms_navbar-height);
+    left: 0;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+}
+
+header nav .nav-item:hover .dropdown-menu.ms_dropdown-menu {
+    display: block;
+}
+
+header nav .dropdown-item {
+    padding: unset;
+}
+
+header nav .dropdown-item:hover {
+    background-color: unset;
+}
+
+header nav .ms_play-icon {
+    width: 4rem;
+}
+
+header nav .ms_play-wrapper {
+    width: 7rem;
+    margin: 0 4rem;
+    border: 4px solid transparent;
+    border-radius: 10px;
+}
+
+header nav .ms_play-wrapper:hover {
+    border: 4px solid lightgray;
 }
 
 /* JUMBOTRON */
@@ -149,6 +227,47 @@ header .nav-link.active.ms_btn-dark {
 
 #jumbotron img {
     width: 20rem;
+}
+
+/* CARDS */
+.ms_card {
+    transition: 750ms;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.ms_card:hover {
+    transform: translateY(-17.5px);
+}
+
+/* CONSOLE */
+.ms_opacity {
+    opacity: .5;
+    transition: 250ms;
+}
+
+.ms_opacity:hover {
+    opacity: 1;
+}
+
+.ms_border-bottom {
+    border-bottom: 2px solid;
+}
+
+.ms_border-bottom-hover {
+    border-bottom: 2px solid transparent;
+}
+
+.ms_border-bottom-hover:hover {
+    border-bottom: 2px solid;
+}
+
+.ms_border-blue {
+    border-color: var(--ms_secondary-light-color);
+}
+
+.ms_border-blue-hover:hover {
+    border-color: var(--ms_secondary-light-color);
 }
 
 /* BANNER */
@@ -178,3 +297,14 @@ footer .ms_country {
     line-height: 1.25rem;
     vertical-align: middle;
 }
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/*  */
+
